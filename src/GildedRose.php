@@ -23,6 +23,10 @@ final class GildedRose
         $this->setItems($items);
     }
 
+    /**
+     * Update items
+     * @return $this
+     */
     public function updateQuality(): GildedRose
     {
         foreach ($this->getItems() as $item) {
@@ -31,6 +35,11 @@ final class GildedRose
         return $this;
     }
 
+    /**
+     * Set item list
+     * @param array $items
+     * @return $this
+     */
     public function setItems(array $items): GildedRose
     {
         $this->items = $items;
@@ -38,11 +47,19 @@ final class GildedRose
         return $this;
     }
 
+    /**
+     * Get item list
+     * @return array
+     */
     public function getItems(): array
     {
         return $this->items;
     }
 
+    /**
+     * Place the items in classes that will transform them
+     * @return $this
+     */
     public function extendItems(): GildedRose
     {
         $extendedItems = array();
